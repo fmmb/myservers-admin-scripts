@@ -1,7 +1,4 @@
-# admin-tigre.iul.lab
-Set of management scripts for the SO server at ISCTE-IUL
-
-## User management
+# User management
 You can perform the following operations inside the ./users directory   
 
 You may execute the following command to avoid encoding problems
@@ -28,14 +25,23 @@ Adding students to a new group that does no exist yet
     sudo ./append_users.sh alunos_pcl.txt pcl
    
 
-## Skeleton
+# Skeleton
 
 In order to provide the same configuration for all the new users, you must ensure that the content of "./skel" is copied to
 
 	/etc/skel
 
 
-## Other stuff
+# System administration
+
+Analyse the permissions of all student users and makes sure that they are set to the default value
+
+	./system/set_permissions.sh
+
+You may want to add this script to your cron, and send the result to a log file
+
+
+# Other stuff
 
 Use ASCII only and remove special characters 
 
