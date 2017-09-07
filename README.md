@@ -1,10 +1,6 @@
 # User management
 You can perform the following operations inside the ./users directory   
 
-You may execute the following command to avoid encoding problems
-
-    export LC_ALL="pt_PT.UTF-8"
-
 Add new users to the group "so", based on a list of users    
 
     sudo ./append_users.sh alunos_test.txt [so]
@@ -46,6 +42,10 @@ You may want to add these scripts to your cron, and send the result to a log fil
 
 
 # Other stuff
+
+You may execute the following command to avoid encoding problems
+
+    export LC_ALL="pt_PT.UTF-8"
 
 Use ASCII only and remove special characters 
 
