@@ -1,5 +1,5 @@
 # admin-tigre.iul.lab
-Set of imanagement scripts for the SO server at ISCTE-IUL
+Set of management scripts for the SO server at ISCTE-IUL
 
 ## User management
 You can perform the following operations inside the ./users directory   
@@ -27,6 +27,13 @@ Adding students to a new group that does no exist yet
     sudo addgroup pcl
     sudo ./append_users.sh alunos_pcl.txt pcl
    
+
+## Skeleton
+
+In order to provide the same configuration for all the new users, you must ensure that the content of "./skel" is copied to
+
+	/etc/skel
+
 
 ## Other stuff
 
