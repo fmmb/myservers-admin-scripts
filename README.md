@@ -49,6 +49,13 @@ You may want top add the following line to the root's cron during the 8th week (
 
 	*/5 * 5-12 11 * /home/fmmb/bin/killmultproc.sh kill &> /dev/null
 
+Students will be creating IPCS and will not delete them. You may want to do so, once in the while
+
+	./system/ipcrm_all.sh
+	./system/ipcrm_all.sh a[0-9]
+	./system/ipcrm_all.sh fmmb
+
+You may also want to add a new line to the root's cron during the week 12.
 
 # Other stuff
 
