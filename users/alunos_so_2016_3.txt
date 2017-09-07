@@ -1,6 +1,0 @@
-65005	Tatiana Catan	tcnaa@iscte.pt
-55288	Ladislau Clusse	lmblc@iscte.pt
-37788	Wellington Oliveira	Wellington_Oliveira@iscte.pt
-61783	Pedro Afonso	pmcmr@iscte.pt
-73278	Nuno Antunes	Nuno_Goncalves@iscte.pt
-70007	Joao Matos	Joao_Francisco_Matos@iscte.pt

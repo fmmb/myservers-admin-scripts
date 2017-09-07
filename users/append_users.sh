@@ -1,18 +1,21 @@
 #!/bin/zsh
 
-grupo=so
-#grupo=soca
-#grupo=pcl
-
-if [ $# -ne 1 ]; then
+if [ $# -lt 1 ]; then
   echo "please provide the filename containing the new users"
   exit 1
 elif [ ! -f "$1" ]; then
   echo "The filename containing the new users does not exist"
   exit 2
 fi
-
 newusers=$1
+
+# Default group
+group=so
+#group=pcl
+#group=soca
+if [ $# -eq 2 ]; then
+  group=$2
+fi
 
 echo "Ok, Ready to append the additional students"
 
@@ -24,7 +27,7 @@ cat $newusers | iconv -f UTF-8 -t 'ASCII//TRANSLIT' | while read line; do
   else
     nome=$( echo "$line" | awk -F'\t' '{print $2}')
     email=$( echo "$line" | awk -F'\t' '{print $3}')
-    adduser --ingroup $grupo --gecos "$nome" --disabled-login $username
+    adduser --ingroup $group --gecos "$nome" --disabled-login $username
     chmod 700 /home/$username
     ./reset_password.sh $email $username
   fi
