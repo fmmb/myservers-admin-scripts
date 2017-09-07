@@ -1,3 +1,5 @@
+Please make sure that your directory has the correct permissions. You must prevent other users to look into your backups and logs.
+
 # User management
 You can perform the following operations inside the ./users directory   
 
