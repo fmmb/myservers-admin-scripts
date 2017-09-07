@@ -2,7 +2,7 @@ Please make sure that your directory has the correct permissions.
 You must prevent other users of looking into your backups and logs.
 
 # User management
-You can perform the following operations inside the ./users directory   
+You can perform the following operations concerning the user management
 
 Add new users to the group "so", based on a list of users    
 
@@ -35,28 +35,28 @@ In order to provide the same configuration for all the new users, you must ensur
 
 Analyse the permissions of all student users and makes sure that they are set to the default value
 
-	sudo ./system/set_permissions.sh
+	sudo ./set_permissions.sh
 
 Backup all users
 	
-	sudo ./system/backup.sh
+	sudo ./backup.sh
 
 You may want to add these scripts to your cron, and send the result to a log file
 
 
 You will need to check and kill processes of some students that are not being carefull. The following command will do it for you. Without parameters, the script only performs the analysis but does nothing. "fkill" performs a "forced kill"
 	
-	./system/killmultproc.sh [kill|fkill]
+	./killmultproc.sh [kill|fkill]
 
 You may want top add the following line to the root's cron during the 8th week (last week of trab2)
 
-	*/5 * 5-12 11 * /home/fmmb/bin/killmultproc.sh kill &> /dev/null
+	*/5 * 5-12 11 * /home/admin/scripts/killmultproc.sh kill &> /dev/null
 
 Students will be creating IPCS and will not delete them. You may want to do so, once in the while
 
-	./system/ipcrm_all.sh
-	./system/ipcrm_all.sh a[0-9]
-	./system/ipcrm_all.sh fmmb
+	./ipcrm_all.sh
+	./ipcrm_all.sh a[0-9]
+	./ipcrm_all.sh fmmb
 
 You may also want to add a new line to the root's cron during the week 12.
 
