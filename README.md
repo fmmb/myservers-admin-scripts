@@ -27,6 +27,9 @@ Adding students to a new group that does no exist yet
     sudo addgroup pcl
     sudo ./append_users.sh alunos_pcl.txt pcl
    
+
+## Other stuff
+
 Use ASCII only and remove special characters 
 
     iconv -f UTF-8 -t 'ASCII//TRANSLIT'
