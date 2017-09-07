@@ -41,6 +41,15 @@ Backup all users
 You may want to add these scripts to your cron, and send the result to a log file
 
 
+You will need to check and kill processes of some students that are not being carefull. The following command will do it for you. Without parameters, the script only performs the analysis but does nothing. "fkill" performs a "forced kill"
+	
+	./system/killmultproc.sh [kill|fkill]
+
+You may want top add the following line to the root's cron during the 8th week (last week of trab2)
+
+	*/5 * 5-12 11 * /home/fmmb/bin/killmultproc.sh kill &> /dev/null
+
+
 # Other stuff
 
 You may execute the following command to avoid encoding problems
