@@ -36,9 +36,13 @@ In order to provide the same configuration for all the new users, you must ensur
 
 Analyse the permissions of all student users and makes sure that they are set to the default value
 
-	./system/set_permissions.sh
+	sudo ./system/set_permissions.sh
 
-You may want to add this script to your cron, and send the result to a log file
+Backup all users
+	
+	sudo ./system/backup.sh
+
+You may want to add these scripts to your cron, and send the result to a log file
 
 
 # Other stuff
