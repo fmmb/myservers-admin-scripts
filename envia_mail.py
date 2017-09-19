@@ -63,9 +63,8 @@ password: """ + passwd + u"""
 O acesso ao servidor será feito durante as aulas práticas. 
 Fora das aulas práticas o acesso está restrito a utilizadores ligados à rede do ISCTE, 
 quer através da EDUROAM dentro do campus do ISCTE-IUL, ou através de uma VPN.
-Este ano, os alunos de SO vão usar e testar uma nova VPN que funcionará em todos os 
-sistemas operativos (Windows, OS X, Linux). Consulte as instruções no e-learning, 
-na secção "Material das aulas".
+Os alunos de SO podem usar uma VPN que funciona em Windows, OSX e Linux.
+Consulte as instruções no e-learning, na secção "Material das aulas".
 
 No seu primeiro acesso ao servidor deve mudar a sua password usando o comando "passwd".
 Esse comando começa por lhe pedir a password que lhe foi agora enviada e só depois é que 
