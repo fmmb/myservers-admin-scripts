@@ -17,7 +17,11 @@ if [ $# -eq 2 ]; then
   group=$2
 fi
 
-echo "Ok, Ready to append the additional students"
+if [ ! -f mensagem.$grp.txt ]; then
+   echo "error: File not found mensagem.$grp.txt"
+fi
+
+echo "Ok, Ready to append additional students"
 
 cat $newusers | iconv -f UTF-8 -t 'ASCII//TRANSLIT' | while read line; do
   username=a$( echo "$line" | awk -F'\t' '{print $1}')
