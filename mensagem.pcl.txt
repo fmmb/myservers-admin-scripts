@@ -1,17 +1,16 @@
 Servidor de PCL: tigre.iul.lab
 
 Caro(a) aluno(a) #NAME#,
-
-Os seus dados de acesso ao servidor tigre.iul.lab são:
+Tal como foi combinado durante a aula, foi-lhe dado acesso ao servidor tigre.iul.lab.
+Os seus dados de acesso ao servidor são:
 
 username: #USERNAME#
 password: #PASSWORD#
 
-O acesso ao servidor será feito durante as aulas práticas. 
-Fora das aulas práticas o acesso está restrito a utilizadores ligados à rede do ISCTE-IUL, 
+O acesso está restrito a utilizadores ligados à rede do ISCTE-IUL, 
 quer através da EDUROAM dentro do campus do ISCTE-IUL, ou através de uma VPN.
-Os alunos de SOCA podem usar uma VPN que funciona em Windows, OSX e Linux.
-Consulte as instruções no e-learning, na secção "Conteúdos da UC".
+Os alunos de PCL podem usar uma VPN que funciona em Windows, OSX e Linux.
+Consulte as instruções no e-learning, na secção "Informações".
 
 No seu primeiro acesso ao servidor deve mudar a sua password usando o comando "passwd".
 Esse comando começa por lhe pedir a password que lhe foi agora enviada e só depois é que 

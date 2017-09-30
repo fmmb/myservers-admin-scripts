@@ -19,7 +19,7 @@ if [ $match -ne 0 ]; then
       exit 1
     fi
     password=$(./create_random_passwd.py)
-	echo "($password)"
+	#echo "($password)"
     echo $password | awk '{print $0; print $0}' | passwd $username
     cat mensagem.$grp.txt | sed "s/#NAME#/$name/g;s/#USERNAME#/$username/g;s/#PASSWORD#/$password/g" | ./envia_mail.py "$email"
 else
