@@ -48,7 +48,7 @@ You will need to check and kill processes of some students that are not being ca
 	
 	./killmultproc.sh [kill|fkill]
 
-You may want top add the following line to the root's cron during the 8th week (last week of trab2)
+You may want to add the following line to the root's cron during the 8th week (last week of trab2)
 
 	*/5 * 5-12 11 * /home/admin/scripts/killmultproc.sh kill &> /dev/null
 
