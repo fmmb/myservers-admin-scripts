@@ -84,6 +84,6 @@ Add the following lines to `/etc/sudoers`
     %sudo ALL=NOPASSWD: ALL, !NSHELLS, !NSU
     %staff ALL=NOPASSWD: /usr/bin/ipcs, /bin/kill
 
-Also add the users to the group, by adding the line of `/etc/group`
+Also add the users to the group, by adding the users to `/etc/group`. Example:
     
     staff:x:50:ccruz,cecoutinho,jfelicio,rafael,pjp
