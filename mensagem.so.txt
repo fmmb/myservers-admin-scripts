@@ -1,21 +1,21 @@
-Servidor de Sistemas Operativos: tigre.iul.lab
+Acesso ao tigre.iul.lab, servidor de Sistemas Operativos
 
-Caro(a) aluno(a) #NAME#,
+Caro(a) estudante #NAME#,
 
 Os seus dados de acesso ao tigre.iul.lab, servidor de Sistemas Operativos, são:
 
 username: #USERNAME#
 password: #PASSWORD#
 
-O acesso ao servidor será feito durante as aulas práticas. 
-Fora das aulas práticas o acesso está restrito a utilizadores ligados à rede do ISCTE, 
-quer através da EDUROAM dentro do campus do ISCTE-IUL, ou através de uma VPN.
-Os alunos de SO podem usar uma VPN que funciona em Windows, OSX e Linux.
-Consulte as instruções no e-learning, na secção "Material das aulas".
+O acesso ao servidor será feito durante as aulas práticas da UC. 
+Fora das aulas práticas o acesso está restrito a utilizadores ligados à rede do ISCTE-IUL, 
+quer através da EDUROAM, dentro do campus do ISCTE-IUL, ou através de uma VPN.
+As instruções para acesso através de VPN estão disponíveis no e-learning, na secção "Elementos de estudo".
 
-No seu primeiro acesso ao servidor deve mudar a sua password usando o comando "passwd".
+No seu primeiro acesso ao servidor deve mudar a password, usando para isso o comando "passwd".
 Esse comando começa por lhe pedir a password que lhe foi agora enviada e só depois é que 
-introduzirá a sua nova password. Note que a nova password terá de ser digitada duas vezes.
+introduzirá a sua nova password.
+Note que a nova password terá de ser digitada duas vezes, para que se garanta que não houve enganos.
 Exemplo:
 
 passwd
@@ -24,5 +24,5 @@ Changing password for #USERNAME#.
 Enter new UNIX password:  
 Retype new UNIX password: 
 
-Qualquer problema ou dúvida contacte o docente Fernando Batista ou João Oliveira.
+Qualquer problema ou dúvida contacte o docente Fernando Batista.
 Obrigado.
