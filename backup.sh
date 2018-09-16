@@ -7,7 +7,7 @@ if [ ! -d $DDIR ]; then
 fi
 
 data=$(date +"%Y-%m-%d-%H-%M")
-mkdir $DIR/$data
+mkdir $DDIR/$data
 cd $DDIR/$data
 
 for i in /home/a[0-9]*; do
