@@ -77,13 +77,12 @@ Analyse running processes
 
 # Giving some previledges to the staff
 
+Also add the users to the group, by adding the users to `/etc/group`. Example:
+    
+    staff:x:50:ccruz,cecoutinho,jfelicio,rafael,pjp
 
 Add the following lines to `/etc/sudoers` 
 
     %sudopass ALL=(ALL) ALL, !NSHELLS
     %sudo ALL=NOPASSWD: ALL, !NSHELLS, !NSU
     %staff ALL=NOPASSWD: /usr/bin/ipcs, /bin/kill
-
-Also add the users to the group, by adding the users to `/etc/group`. Example:
-    
-    staff:x:50:ccruz,cecoutinho,jfelicio,rafael,pjp
