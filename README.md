@@ -44,7 +44,7 @@ Backup all users
 You may want to add these scripts to your cron, and send the result to a log file
 
 
-You will need to check and kill processes of some students that are not being carefull. The following command will do it for you. Without parameters, the script only performs the analysis but does nothing. "fkill" performs a "forced kill"
+You will need to check and kill processes of some students that are not being carefull. The following command will do it for you. Without parameters, the script only performs the analysis but does nothing. `fkill` performs a `forced kill`
 	
 	./killmultproc.sh [kill|fkill]
 
@@ -78,12 +78,12 @@ Analyse running processes
 # Giving some previledges to the staff
 
 
-Add the following lines to "/etc/sudoers"
+Add the following lines to `/etc/sudoers` 
 
     %sudopass ALL=(ALL) ALL, !NSHELLS
     %sudo ALL=NOPASSWD: ALL, !NSHELLS, !NSU
     %staff ALL=NOPASSWD: /usr/bin/ipcs, /bin/kill
 
-Also add the users to the group, by adding the line of "/etc/group"
+Also add the users to the group, by adding the line of `/etc/group`
     
     staff:x:50:ccruz,cecoutinho,jfelicio,rafael,pjp
