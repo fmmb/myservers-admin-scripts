@@ -11,14 +11,16 @@ newusers=$1
 
 # Default group
 group=so
+#group=tm
 #group=pcl
 #group=soca
 if [ $# -eq 2 ]; then
   group=$2
 fi
 
-if [ ! -f mensagem.$grp.txt ]; then
-   echo "error: File not found mensagem.$grp.txt"
+if [ ! -f mensagem.$group.txt ]; then
+   echo "error: File not found mensagem.$group.txt"
+   exit 3
 fi
 
 echo "Ok, Ready to append additional students"
@@ -34,5 +36,9 @@ cat $newusers | iconv -f UTF-8 -t 'ASCII//TRANSLIT' | while read line; do
     adduser --ingroup $group --gecos "$nome" --disabled-login $username
     chmod 700 /home/$username
     ./reset_password.sh $email $username
+
+    if [ $group = "tm" ]; then
+      adduser $username jupyterhub
+    fi
   fi
 done
