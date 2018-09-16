@@ -1,2 +1,2 @@
-88888	Aluno Oliveira	joao.p.oliveira@iscte.pt
-88889	Aluno Batista	fmmb@iscte.pt
+88888	Estudante Manuel	fmmb@iscte-iul.pt
+88889	Estudante Batista	fernando.batista@iscte-iul.pt
