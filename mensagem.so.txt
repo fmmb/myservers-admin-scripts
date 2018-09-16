@@ -10,7 +10,10 @@ password: #PASSWORD#
 O acesso ao servidor será feito durante as aulas práticas da UC. 
 Fora das aulas práticas o acesso está restrito a utilizadores ligados à rede do ISCTE-IUL, 
 quer através da EDUROAM, dentro do campus do ISCTE-IUL, ou através de uma VPN.
-As instruções para acesso através de VPN estão disponíveis no e-learning, na secção "Elementos de estudo".
+As instruções para acesso através de VPN estão disponíveis, tanto na secção 
+"Elementos de estudo" do e-learning, como no site do ISCTE-IUL, na página:
+ESTUDANTES > APOIO INFORMÁTICO > SERVIÇOS > Virtual Private Network (VPN)
+https://www.iscte-iul.pt/conteudos/estudantes/apoio-informatico/1102/servicos
 
 No seu primeiro acesso ao servidor deve mudar a password, usando para isso o comando "passwd".
 Esse comando começa por lhe pedir a password que lhe foi agora enviada e só depois é que 
