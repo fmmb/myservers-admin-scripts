@@ -26,7 +26,7 @@ Adding students to a new group that does no exist yet
 
 # Skeleton
 
-In order to provide the same configuration for all the new users, you must ensure that the content of "./skel" is copied to
+In order to provide the same configuration for all the new users, the files in "./skel" should be copied to
 
 	/etc/skel
 
@@ -75,3 +75,8 @@ Analyse running processes
     ps -eo pcpu,pid,user,args --no-headers| sort -t. -nk1,2 -k4,4 -r |head -n 5
 
 
+# Giving some previledges to the staff
+
+
+Add the following line to /etc/sudoers
+    %staff ALL=NOPASSWD: /usr/bin/ipcs, /bin/kill
