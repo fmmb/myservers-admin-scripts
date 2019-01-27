@@ -28,10 +28,25 @@ Adding students to a new group that does no exist yet
 
 # Skeleton
 
-In order to provide the same configuration for all the new users, the files in "./skel" should be copied to
+You may want to create the file /etc/skel/.vimrc
+	syntax on
+	set shiftwidth=4
+	set tabstop=4
+	set softtabstop=4
+	
+	"set autoindent
+	"set number
+	"set expandtab
 
-	/etc/skel
+	set backup
+	set writebackup
 
+	set backupdir=~/.vim_backups,.
+	set directory=~/.vim_backups,.
+
+please consider adding the following to /etc/skel/.profile
+	HISTSIZE=10000
+	HISTFILESIZE=50000
 
 # System administration
 
