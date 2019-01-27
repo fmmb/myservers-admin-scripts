@@ -29,6 +29,7 @@ Adding students to a new group that does no exist yet
 # Skeleton
 
 You may want to create the file /etc/skel/.vimrc
+
 	syntax on
 	set shiftwidth=4
 	set tabstop=4
@@ -45,6 +46,7 @@ You may want to create the file /etc/skel/.vimrc
 	set directory=~/.vim_backups,.
 
 please consider adding the following to /etc/skel/.profile
+
 	HISTSIZE=10000
 	HISTFILESIZE=50000
 
