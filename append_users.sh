@@ -1,4 +1,8 @@
-#!/bin/zsh
+#!/bin/bash
+
+# What I really would like would be to have the user ID iqual to the student ID, but it can't be.
+# The file /etc/group is used for knowing who is currently a member of some group
+# please unsure that the following groups exist: student
 
 if [ $# -lt 1 ]; then
   echo "please provide the filename containing the new users"
@@ -9,11 +13,12 @@ elif [ ! -f "$1" ]; then
 fi
 newusers=$1
 
-# Default group
-group=so
-#group=tm
-#group=pcl
-#group=soca
+# Default group 
+# group=so
+# group=pcl
+# group=soca
+group=tm
+
 if [ $# -eq 2 ]; then
   group=$2
 fi
@@ -21,24 +26,29 @@ fi
 if [ ! -f mensagem.$group.txt ]; then
    echo "error: File not found mensagem.$group.txt"
    exit 3
+else
+   echo "Adding users to the group: $group"
 fi
 
-echo "Ok, Ready to append additional students"
+echo -n "Press <enter> to start appending additional students "
+read ok
 
-cat $newusers | iconv -f UTF-8 -t 'ASCII//TRANSLIT' | tr -d "'" | while read line; do
+cat $newusers | iconv -f UTF-8 -t 'ASCII//TRANSLIT' | while read line; do
   username=a$( echo "$line" | awk -F'\t' '{print $1}')
   match=$(grep -c "^$username" /etc/passwd )
   if [ $match -ne 0 ]; then
-     echo "skipping $username, user already exists"
+     echo "Skipping: user $username already exists"
   else
     nome=$( echo "$line" | awk -F'\t' '{print $2}')
     email=$( echo "$line" | awk -F'\t' '{print $3}')
-    adduser --ingroup $group --gecos "$nome" --disabled-login $username
+    adduser --ingroup student --gecos "$nome,$email" --disabled-login $username
     chmod 700 /home/$username
-    ./reset_password.sh $email $username
 
-    if [ $group = "tm" ]; then
+    adduser $username $group
+    if [ $HOSTNAME = "cloud114.ncg.ingrid.pt" ]; then
       adduser $username jupyterhub
     fi
+
+    ./reset_password.sh $username
   fi
 done

@@ -1,8 +1,8 @@
-Acesso ao tigre.iul.lab, servidor de Sistemas Operativos
+Acesso ao servidor de Sistemas Operativos: tigre.iul.lab
 
 Caro(a) estudante #NAME#,
 
-Os seus dados de acesso ao tigre.iul.lab, servidor de Sistemas Operativos, são:
+Os seus dados de acesso ao servidor de Sistemas Operativos (tigre.iul.lab), são:
 
 username: #USERNAME#
 password: #PASSWORD#
@@ -17,9 +17,8 @@ https://www.iscte-iul.pt/conteudos/estudantes/apoio-informatico/1102/servicos
 
 No seu primeiro acesso ao servidor deve mudar a password, usando para isso o comando "passwd".
 Esse comando começa por lhe pedir a password que lhe foi agora enviada e só depois é que 
-introduzirá a sua nova password.
-Note que a nova password terá de ser digitada duas vezes, para que se garanta que não houve enganos.
-Exemplo:
+introduzirá a sua nova password.  Note que a nova password terá de ser digitada duas vezes,
+para que se garanta que não houve enganos.  Exemplo:
 
 passwd
 Changing password for #USERNAME#.
@@ -28,4 +27,4 @@ Enter new UNIX password:
 Retype new UNIX password: 
 
 Qualquer problema ou dúvida contacte o docente Fernando Batista.
-Obrigado.
+Obrigado

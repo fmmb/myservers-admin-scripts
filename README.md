@@ -12,7 +12,7 @@ Add new users to the group "so", based on a list of users
 
 Reseting the password of a student 
 
-    sudo ./reset_password.sh fmmb@iscte-iul.pt a88888
+    sudo ./reset_password.sh a00001 [fmmb@iscte-iul.pt]
    
 Delete all the accounts 
 
