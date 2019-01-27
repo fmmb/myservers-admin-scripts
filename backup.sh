@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 DDIR=/home/ubuntu/admin/Backups
 if [ ! -d $DDIR ]; then

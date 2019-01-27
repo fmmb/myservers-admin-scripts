@@ -1,18 +1,18 @@
-Servidor: cloud114.ncg.ingrid.pt
+Servidor de PCL: tigre.iul.lab
 
-Caro(a) estudante #NAME#,
-Foi-lhe dado acesso ao servidor de Text Mining que se encontra em http://cloud114.ncg.ingrid.pt/
+Caro(a) aluno(a) #NAME#,
+Tal como foi combinado durante a aula, foi-lhe dado acesso ao servidor tigre.iul.lab.
 Os seus dados de acesso ao servidor são:
 
 username: #USERNAME#
 password: #PASSWORD#
 
-Será necessário usar um certificado para aceder ao servidor, que poderá ser solicitado
-ao docente Fernando Batista.
+O acesso está restrito a utilizadores ligados à rede do ISCTE-IUL, 
+quer através da EDUROAM dentro do campus do ISCTE-IUL, ou através de uma VPN.
+Os alunos de PCL podem usar uma VPN que funciona em Windows, OSX e Linux.
+Consulte as instruções no e-learning, na secção "Informações".
 
-Deve mudar a sua password usando o comando "passwd" na linha de comando.
-Note que a linha de comandos está acessível usando a opção "New -> Terminal"
-
+No seu primeiro acesso ao servidor deve mudar a sua password usando o comando "passwd".
 Esse comando começa por lhe pedir a password que lhe foi agora enviada e só depois é que 
 introduzirá a sua nova password. Note que a nova password terá de ser digitada duas vezes.
 Exemplo:

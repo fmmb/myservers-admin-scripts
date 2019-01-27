@@ -47,6 +47,7 @@ cat $newusers | iconv -f UTF-8 -t 'ASCII//TRANSLIT' | while read line; do
     adduser $username $group
     if [ $HOSTNAME = "cloud114.ncg.ingrid.pt" ]; then
       adduser $username jupyterhub
+      # Please don't forget to manually add these users later on in the jupyterhub interface
     fi
 
     ./reset_password.sh $username
