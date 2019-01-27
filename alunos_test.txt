@@ -1,2 +1,1 @@
-88888	Estudante Manuel	fmmb@iscte-iul.pt
-88889	Estudante Batista	fernando.batista@iscte-iul.pt
+00001	Estudante de Teste	fmmb@iscte-iul.pt
