@@ -1,6 +1,8 @@
 Please make sure that your directory has the correct permissions.
 You must prevent other users of looking into your backups and logs.
 
+This repo is now also being used with the TM machine
+
 # User management
 You can perform the following operations concerning the user management
 
