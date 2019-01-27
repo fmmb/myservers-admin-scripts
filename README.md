@@ -94,7 +94,7 @@ Analyse running processes
     ps -eo pcpu,pid,user,args --no-headers| sort -t. -nk1,2 -k4,4 -r |head -n 5
 
 
-# Giving some previledges to the staff
+# Giving some previledges to the staff (SO server only)
 
 Also add the users to the group, by adding the users to `/etc/group`. Example:
     
