@@ -24,12 +24,11 @@ if [ $match -ne 0 ]; then
     password=$(./create_random_passwd.py)
     #echo "($password)"
     echo $password | awk '{print $0; print $0}' | passwd $username
-    if [ "$HOSTNAME" = "tigre.iul.lab" ]; then
-       cat mensagem.$group.txt | sed "s/#NAME#/$name/g;s/#USERNAME#/$username/g;s/#PASSWORD#/$password/g" | ./envia_mail.py "$email"
+    if [ -n "$admin_email_pass" ]; then
+      # Checks inf the environment variable has been set
+      cat mensagem.$group.txt | sed "s/#NAME#/$name/g;s/#USERNAME#/$username/g;s/#PASSWORD#/$password/g" | ./envia_mail.py "$email"
     else
-       echo "cat mensagem.$group.txt | sed \"s/#NAME#/$name/g;s/#USERNAME#/$username/g;s/#PASSWORD#/$password/g\" | ./envia_mail.py \"$email\"" >> commands-to-use-in-the-smtp-server.sh
-    fi
+      echo "cat mensagem.$group.txt | sed \"s/#NAME#/$name/g;s/#USERNAME#/$username/g;s/#PASSWORD#/$password/g\" | mailx -r \"fernando.batista@iscte-iul.pt (Fernando Batista)\" -s \"ISCTE-IUL: acesso ao servidor tm.iscte.me\" \"$email\"" >> commands-to-use-in-the-smtp-server.sh
 else
    echo "Skipping: user $username does not exists"
 fi
-

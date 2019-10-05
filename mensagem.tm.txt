@@ -1,11 +1,11 @@
-Servidor de Text Mining: tm.iscte.me
+Servidor de Text Mining: http://tm.iscte.me
 
 Caro(a) estudante #NAME#,
 
-Os seus dados de acesso ao servidor são:
+Os seus dados de acesso ao servidor:
 
 username: #USERNAME#
 password: #PASSWORD#
 
-Qualquer problema ou dúvida contacte o docente Fernando Batista.
+Qualquer problema no acesso ao servidor contacte o docente Fernando Batista.
 Obrigado.

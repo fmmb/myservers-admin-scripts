@@ -1,27 +1,12 @@
-Servidor: cloud114.ncg.ingrid.pt
+Servidor de Text Mining: http://tm.iscte.me
 
 Caro(a) estudante #NAME#,
-Foi-lhe dado acesso ao servidor de Text Mining que se encontra em http://cloud114.ncg.ingrid.pt/
-Os seus dados de acesso ao servidor são:
+
+No contexto da Unidade Curricular PCL (Processamento Computacional da Lingua), foi-lhe dado acesso ao servidor de text mining.
+Os seus dados de acesso ao servidor:
 
 username: #USERNAME#
 password: #PASSWORD#
 
-Será necessário usar um certificado para aceder ao servidor, que poderá ser solicitado
-ao docente Fernando Batista.
-
-Deve mudar a sua password usando o comando "passwd" na linha de comando.
-Note que a linha de comandos está acessível usando a opção "New -> Terminal"
-
-Esse comando começa por lhe pedir a password que lhe foi agora enviada e só depois é que 
-introduzirá a sua nova password. Note que a nova password terá de ser digitada duas vezes.
-Exemplo:
-
-passwd
-Changing password for #USERNAME#.
-(current) UNIX password:  (colocar a password que lhe foi enviada)
-Enter new UNIX password:  
-Retype new UNIX password: 
-
-Qualquer problema ou dúvida contacte o docente Fernando Batista.
+Qualquer problema no acesso ao servidor contacte o docente Fernando Batista.
 Obrigado.

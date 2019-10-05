@@ -4,6 +4,7 @@ import string
 import random
 import smtplib
 import sys
+import os
 # import Encode
 
 from time import sleep
@@ -40,15 +41,17 @@ for line in sys.stdin:
    if subject is None:
 		subject = line
    else:
-		mensagem.append(line) 
+		mensagem.append(line)
 texto="".join(mensagem)
 
 msg = MIMEMultipart('alternative')
 # Utility functions
 # ------------------------------------------------------------------------------
 
-mailfrom  = "Fernando Batista <fmmb@iscte.pt>"
-mailto = "" 
+emailuser = "fmmb@iscte-iul.pt"
+emailpass = os.environ['admin_email_pass']
+mailfrom  = "Fernando Batista <" + emailuser + ">"
+mailto = ""
 
 mailto = unicode(opt['email'],'utf-8')
 
@@ -62,8 +65,11 @@ msg.attach(part1)
 
 #		print unicode(texto,'utf-8')
 # Send the message via local SMTP server.
-s = smtplib.SMTP('smtp.iscte.pt')
+s = smtplib.SMTP('smtp.office365.com', 587)
+s.ehlo()
+s.starttls()
+s.login(emailuser, emailpass)
 s.sendmail(mailfrom, mailto, msg.as_string())
 s.quit()
-print "Message sent to <%s>"%mailto
+print ("Message sent to user %s (%s)"%(mailto, mailto))
 sleep(2)

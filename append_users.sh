@@ -13,14 +13,14 @@ elif [ ! -f "$1" ]; then
 fi
 newusers=$1
 
-# Default group 
-# group=so
-# group=pcl
-# group=soca
-group=tm
+# possible groups: tm, pcl, msc, so, soca
+# group=tm
 
-if [ $# -eq 2 ]; then
+if [ $# -eq 2 ] && [ $( grep -c "^$2:" /etc/group ) -gt 0 ]; then
   group=$2
+else
+  echo "ERROR: Please provide the group name. aborting"
+  exit 1
 fi
 
 if [ ! -f mensagem.$group.txt ]; then
@@ -45,7 +45,7 @@ cat $newusers | iconv -f UTF-8 -t 'ASCII//TRANSLIT' | while read line; do
     chmod 700 /home/$username
 
     adduser $username $group
-    if [ $HOSTNAME = "cloud114.ncg.ingrid.pt" ]; then
+    if [ $( grep -c "^jupyterhub:" /etc/group ) -gt 0 ]; then
       adduser $username jupyterhub
       # Please don't forget to manually add these users later on in the jupyterhub interface
     fi
