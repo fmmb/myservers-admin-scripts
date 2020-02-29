@@ -29,6 +29,7 @@ if [ $match -ne 0 ]; then
       cat mensagem.$group.txt | sed "s/#NAME#/$name/g;s/#USERNAME#/$username/g;s/#PASSWORD#/$password/g" | ./envia_mail.py "$email"
     else
       echo "cat mensagem.$group.txt | sed \"s/#NAME#/$name/g;s/#USERNAME#/$username/g;s/#PASSWORD#/$password/g\" | mailx -r \"fernando.batista@iscte-iul.pt (Fernando Batista)\" -s \"ISCTE-IUL: acesso ao servidor tm.iscte.me\" \"$email\"" >> commands-to-use-in-the-smtp-server.sh
+    fi
 else
    echo "Skipping: user $username does not exists"
 fi

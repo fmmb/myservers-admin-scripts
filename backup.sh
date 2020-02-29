@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-DDIR=/home/ubuntu/admin/Backups
+DDIR=/backups
 if [ ! -d $DDIR ]; then
    echo "Destination directory does not exist. Please create it using admin permissions and make sure to protect it"
   exit 2

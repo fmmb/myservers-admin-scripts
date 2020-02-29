@@ -34,7 +34,7 @@ echo -n "Press <enter> to start appending additional students "
 read ok
 
 cat $newusers | iconv -f UTF-8 -t 'ASCII//TRANSLIT' | while read line; do
-  username=a$( echo "$line" | awk -F'\t' '{print $1}')
+  username=$( echo "$line" | awk -F'\t' '{print $1}')
   match=$(grep -c "^$username" /etc/passwd )
   if [ $match -ne 0 ]; then
      echo "Skipping: user $username already exists"
