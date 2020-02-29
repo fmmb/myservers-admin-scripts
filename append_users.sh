@@ -41,7 +41,7 @@ cat $newusers | iconv -f UTF-8 -t 'ASCII//TRANSLIT' | while read line; do
   else
     nome=$( echo "$line" | awk -F'\t' '{print $2}')
     email=$( echo "$line" | awk -F'\t' '{print $3}')
-    adduser --ingroup student --gecos "$nome,$email" --disabled-login $username
+    adduser --ingroup student --gecos "$nome,,,,$email" --disabled-login $username
     chmod 700 /home/$username
 
     adduser $username $group
