@@ -4,6 +4,8 @@
 # The file /etc/group is used for knowing who is currently a member of some group
 # please unsure that the following groups exist: student
 
+MIN_UID=1100 # Users created in 2020/2021 will start at 1100
+
 if [ $# -lt 1 ]; then
   echo "please provide the filename containing the new users"
   exit 1
@@ -13,7 +15,7 @@ elif [ ! -f "$1" ]; then
 fi
 newusers=$1
 
-# possible groups: tm, pcl, msc, so, soca
+# possible groups: tm, pcl, msc, so, soca, tm2020, pcl2020, progcd2020
 # group=tm
 
 if [ $# -eq 2 ] && [ $( grep -c "^$2:" /etc/group ) -gt 0 ]; then
@@ -41,7 +43,7 @@ cat $newusers | iconv -f UTF-8 -t 'ASCII//TRANSLIT' | while read line; do
   else
     nome=$( echo "$line" | awk -F'\t' '{print $2}')
     email=$( echo "$line" | awk -F'\t' '{print $3}')
-    adduser --ingroup student --gecos "$nome,,,,$email" --disabled-login $username
+    adduser --firstuid $MIN_UID --ingroup student --gecos "$nome,,,,$email" --disabled-login $username
     chmod 700 /home/$username
 
     adduser $username $group
@@ -50,6 +52,6 @@ cat $newusers | iconv -f UTF-8 -t 'ASCII//TRANSLIT' | while read line; do
       # Please don't forget to manually add these users later on in the jupyterhub interface
     fi
 
-    ./reset_password.sh $username
+    ./reset_password.sh $username $email
   fi
 done

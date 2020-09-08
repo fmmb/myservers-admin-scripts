@@ -1,0 +1,15 @@
+Servidor: gutenberg.iscte-iul.pt
+
+Caro(a) #NAME#,
+
+O Servidor está disponível no endereço
+
+	http://gutenberg.iscte-iul.pt
+
+Os seus dados de acesso ao servidor são:
+
+username: #USERNAME#
+password: #PASSWORD#
+
+Qualquer problema ou dúvida contacte o docente Fernando Batista.
+Obrigado.
