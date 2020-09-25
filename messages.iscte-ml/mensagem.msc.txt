@@ -1,0 +1,15 @@
+Servidor de Text Mining: tm.iscte.me
+
+Caro(a) estudante #NAME#,
+
+O Servidor está disponível no endereço
+
+	https://tm.iscte.me ou https://iscte-ml.ncg.ingrid.pt
+
+Os seus dados de acesso ao servidor são:
+
+username: #USERNAME#
+password: #PASSWORD#
+
+Qualquer problema ou dúvida contacte o docente Fernando Batista.
+Obrigado.

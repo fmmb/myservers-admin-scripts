@@ -1,0 +1,19 @@
+Servidor de Text Mining: http://tm.iscte.me
+
+Caro(a) estudante #NAME#,
+
+No contexto da Unidade Curricular PCL (Processamento Computacional da Lingua),
+foi-lhe dado acesso ao servidor da unidade curricular Text Mining.
+Os seus dados de acesso ao servidor:
+
+username: #USERNAME#
+password: #PASSWORD#
+
+Para poder entrar no servidor, será necessário instalar um certificado.
+Esse certificado encontra-se disponivel no e-learning, na página da unidade curricular, bem como as instruções para a sua instalação.
+
+Assim que entrar no servidor poderá alterar a sua password num terminal correndo o comando "passwd"
+
+Qualquer problema no acesso ao servidor contacte o docente Fernando Batista.
+
+Obrigado.

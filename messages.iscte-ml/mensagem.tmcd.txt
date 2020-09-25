@@ -1,0 +1,11 @@
+Servidor de Text Mining: http://tm.iscte.me
+
+Caro(a) estudante #NAME#,
+
+Os seus dados de acesso ao servidor:
+
+username: #USERNAME#
+password: #PASSWORD#
+
+Qualquer problema no acesso ao servidor contacte o docente Ricardo Ribeiro.
+Obrigado.
