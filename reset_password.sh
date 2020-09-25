@@ -15,10 +15,10 @@ if [ $match -ne 0 ]; then
        email=$( cat /etc/passwd| grep "^$username:" | awk -F '[:,]' '{print $6}')
     fi
     group=$(cat /etc/group | grep -v "jupyterhub" | grep -w "$username" | head -1 | cut -d':' -f1)
-    if [ -f mensagem.$group.txt ]; then
-       echo "Sending the content of mensagem.$group.txt"
+    if [ -f messages.`hostname`/$group.txt ]; then
+       echo "Sending the content of messages.`hostname`/$group.txt"
     else
-      echo "error: File not found: mensagem.$group.txt"
+      echo "error: File not found: messages.`hostname`/$group.txt"
       exit 1
     fi
     password=$(./create_random_passwd.py)
@@ -26,9 +26,9 @@ if [ $match -ne 0 ]; then
     echo $password | awk '{print $0; print $0}' | passwd $username
     if [ -n "$admin_email_pass" ]; then
       # Checks inf the environment variable has been set
-      cat mensagem.$group.txt | sed "s/#NAME#/$name/g;s/#USERNAME#/$username/g;s/#PASSWORD#/$password/g" | ./envia_mail.py "$email"
+      cat messages.`hostname`/$group.txt | sed "s/#NAME#/$name/g;s/#USERNAME#/$username/g;s/#PASSWORD#/$password/g" | ./envia_mail.py "$email"
     else
-      echo "cat mensagem.$group.txt | sed \"s/#NAME#/$name/g;s/#USERNAME#/$username/g;s/#PASSWORD#/$password/g\" | mailx -r \"fernando.batista@iscte-iul.pt (Fernando Batista)\" -s \"ISCTE-IUL: acesso ao servidor tm.iscte.me\" \"$email\"" >> commands-to-use-in-the-smtp-server.sh
+      echo "cat messages.`hostname`/$group.txt | sed \"s/#NAME#/$name/g;s/#USERNAME#/$username/g;s/#PASSWORD#/$password/g\" | mailx -r \"fernando.batista@iscte-iul.pt (Fernando Batista)\" -s \"Iscte: acesso ao servidor tm.iscte.me\" \"$email\"" >> commands-to-use-in-the-smtp-server.sh
     fi
 else
    echo "Skipping: user $username does not exists"

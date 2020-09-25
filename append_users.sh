@@ -25,14 +25,18 @@ else
   exit 1
 fi
 
-if [ ! -f mensagem.$group.txt ]; then
-   echo "error: File not found mensagem.$group.txt"
+if [ ! -f messages.`hostname`/$group.txt ]; then
+   echo "error: File not found messages.`hostname`/$group.txt"
    exit 3
 else
    echo "Adding users to the group: $group"
 fi
 
-echo -n "Press <enter> to start appending additional students "
+if [ -n "$admin_email_pass" ]; then
+   echo -n "Press <enter> to start appending additional students (Mail will follow)"
+else
+   echo -n "Press <enter> to start appending additional students (no mail will be sent) "
+fi 
 read ok
 
 cat $newusers | iconv -f UTF-8 -t 'ASCII//TRANSLIT' | while read line; do

@@ -6,9 +6,15 @@ This repo is now also being used with the TM machine
 # User management
 You can perform the following operations concerning the user management
 
-Add new users to the group "so", based on a list of users    
+Add new users to the group "tm2020", based on a list of users.    
 
-    sudo ./append_users.sh alunos_test.txt [so]
+    sudo ./append_users.sh 2020-2021.users.txt tm2020
+
+If you want to send an e-mail for the users, you must set the variable "admin\_email\_pass" first.
+
+	read admin_email_pass
+	export admin_email_pass
+	sudo -E ./append_users.sh 2020-2021.users.txt tm2020
 
 Reseting the password of a student 
 

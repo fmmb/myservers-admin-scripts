@@ -39,9 +39,9 @@ subject = None
 mensagem=[]
 for line in sys.stdin:
    if subject is None:
-		subject = line
+      subject = line
    else:
-		mensagem.append(line)
+      mensagem.append(line)
 texto="".join(mensagem)
 
 msg = MIMEMultipart('alternative')
@@ -50,7 +50,8 @@ msg = MIMEMultipart('alternative')
 
 emailuser = "fmmb@iscte-iul.pt"
 emailpass = os.environ['admin_email_pass']
-mailfrom  = "Fernando Batista <" + emailuser + ">"
+#mailfrom  = "Fernando Batista <" + emailuser + ">"
+mailfrom  = "Fernando Batista <Fernando.Batista@iscte-iul.pt>"
 mailto = ""
 
 mailto = unicode(opt['email'],'utf-8')
