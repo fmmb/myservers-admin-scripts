@@ -51,7 +51,8 @@ msg = MIMEMultipart('alternative')
 emailuser = "fmmb@iscte-iul.pt"
 emailpass = os.environ['admin_email_pass']
 #mailfrom  = "Fernando Batista <" + emailuser + ">"
-mailfrom  = "Fernando Batista <Fernando.Batista@iscte-iul.pt>"
+#mailfrom  = "Fernando Batista <Fernando.Batista@iscte-iul.pt>"
+mailfrom  = "Fernando.Batista@iscte-iul.pt"
 mailto = ""
 
 mailto = unicode(opt['email'],'utf-8')

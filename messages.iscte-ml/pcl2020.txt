@@ -9,11 +9,16 @@ Os seus dados de acesso ao servidor:
 username: #USERNAME#
 password: #PASSWORD#
 
-Para poder entrar no servidor, será necessário instalar um certificado.
-Esse certificado encontra-se disponivel no e-learning, na página da unidade curricular, bem como as instruções para a sua instalação.
+Para poder entrar no servidor será necessário instalar um certificado, que se encontra disponivel no e-learning, na página da unidade curricular. Poderá lá encontrar as instruções para a sua instalação.
 
-Assim que entrar no servidor poderá alterar a sua password num terminal correndo o comando "passwd"
+Assim que entrar no servidor poderá alterar a sua password, usando um terminal e correndo o comando 'passwd'
 
-Qualquer problema no acesso ao servidor contacte o docente Fernando Batista.
+passwd
+Changing password for #USERNAME#.
+(current) UNIX password:  (colocar a password que lhe foi enviada)
+Enter new UNIX password:
+Retype new UNIX password:
+
+Qualquer problema no acesso ao servidor, p.f. contacte o docente Fernando Batista.
 
 Obrigado.
