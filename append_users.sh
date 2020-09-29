@@ -33,9 +33,12 @@ else
 fi
 
 if [ -n "$admin_email_pass" ]; then
-   echo -n "Press <enter> to start appending additional students (Mail will follow)"
+   echo -n "Press <enter> to start appending additional students (Mail server password already set)"
 else
-   echo -n "Press <enter> to start appending additional students (no mail will be sent) "
+   echo -n "E-mail server password: "
+   read -s admin_email_pass
+   export admin_email_pass
+   echo -n "Press <enter> to start appending additional students"
 fi 
 read ok
 
