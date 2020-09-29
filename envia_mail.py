@@ -5,6 +5,7 @@ import random
 import smtplib
 import sys
 import os
+import getpass
 # import Encode
 
 from time import sleep
@@ -49,7 +50,11 @@ msg = MIMEMultipart('alternative')
 # ------------------------------------------------------------------------------
 
 emailuser = "fmmb@iscte-iul.pt"
-emailpass = os.environ['admin_email_pass']
+try:
+    emailpass = os.environ['admin_email_pass']
+except:
+	emailpass = getpass.getpass()
+
 #mailfrom  = "Fernando Batista <" + emailuser + ">"
 #mailfrom  = "Fernando Batista <Fernando.Batista@iscte-iul.pt>"
 mailfrom  = "Fernando.Batista@iscte-iul.pt"
@@ -73,5 +78,6 @@ s.starttls()
 s.login(emailuser, emailpass)
 s.sendmail(mailfrom, mailto, msg.as_string())
 s.quit()
+sleep(1)
 print ("Message sent to user %s (%s)"%(mailto, mailto))
-sleep(2)
+sleep(1)

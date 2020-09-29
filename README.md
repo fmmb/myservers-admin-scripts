@@ -23,7 +23,8 @@ Reseting the password of a student
 Delete all the accounts 
 
     cat /etc/passwd | awk -F':' '/^a[0-9]/ {print $1}' | while read user; do
-      echo deluser $user --remove-home
+      #echo deluser $user --remove-home
+      echo deluser --remove-all-files --backup --backup-to /home/archived $user
     done
    
 Adding students to a new group that does no exist yet 

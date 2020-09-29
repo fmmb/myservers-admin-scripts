@@ -15,7 +15,7 @@ echo -n "##### <ENTER> to proceed..."
 read ok
 if [ -z "$ok" ]; then
   rsync --exclude=".*" --update --delete -hratzv --links ~fmmb/TM/ /home/$user/TM
-  find /home/$user/TM -exec chown ${user}:tm {} \;
+  find /home/$user/TM -exec chown ${user}:tm2020 {} \;
 else
   echo "##### Skipping /home/$user/TM..."
 fi
