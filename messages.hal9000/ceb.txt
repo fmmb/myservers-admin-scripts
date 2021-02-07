@@ -1,0 +1,17 @@
+Access to the server hal9000.iscte-iul.pt
+
+Dear student #NAME#,
+
+You have been given access to the server hal9000.iscte-iul.pt, in the context of the course "Computation to Economics and Business".
+
+username: #USERNAME#
+password: #PASSWORD#
+
+Please change de password after logging in, using the command: passwd
+
+The server is available at the address http://hal9000.iscte-iul.pt/
+The certificate needed to access the Jupyter environment is avaliable http://e-learning.iscte-iul.pt/, in the "Information" section
+If you have trouble acessing the server, please contact me.
+
+Best regards,
+Fernando Batista

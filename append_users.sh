@@ -15,8 +15,8 @@ elif [ ! -f "$1" ]; then
 fi
 newusers=$1
 
-# possible groups: tm, pcl, msc, so, soca, tm2020, pcl2020, progcd2020
-# group=tm
+# possible groups: tm, pcl, msc, phd, ceb, tmcd
+# group=tmcd
 
 if [ $# -eq 2 ] && [ $( grep -c "^$2:" /etc/group ) -gt 0 ]; then
   group=$2

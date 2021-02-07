@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 import string
 import random
@@ -60,7 +60,8 @@ except:
 mailfrom  = "Fernando.Batista@iscte-iul.pt"
 mailto = ""
 
-mailto = unicode(opt['email'],'utf-8')
+#mailto = unicode(opt['email'],'utf-8')
+mailto = opt['email']
 
 msg['Subject'] = subject
 msg['From'] = mailfrom
