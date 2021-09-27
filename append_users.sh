@@ -4,7 +4,7 @@
 # The file /etc/group is used for knowing who is currently a member of some group
 # please unsure that the following groups exist: student
 
-MIN_UID=1100 # Users created in 2020/2021 will start at 1100
+MIN_UID=1200 # Users created in 2021/2022 will start at 1165
 
 if [ $# -lt 1 ]; then
   echo "please provide the filename containing the new users"

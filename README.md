@@ -24,6 +24,10 @@ Reseting the password of a student
 
     sudo ./reset_password.sh a00001 [fmmb[at]iscte-iul.pt]
    
+Deactivating a user account 
+
+    chsh --shell /usr/sbin/nologin user_name
+
 Delete all the accounts 
 
     cat /etc/passwd | awk -F':' '/^a[0-9]/ {print $1}' | while read user; do
