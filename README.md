@@ -24,9 +24,15 @@ Reseting the password of a student
 
     sudo ./reset_password.sh a00001 [fmmb[at]iscte-iul.pt]
    
-Deactivating a user account 
+Adding students to a new group that does no exist yet 
 
-    chsh --shell /usr/sbin/nologin user_name
+    sudo addgroup phd
+    sudo ./append_users.sh users/phd.txt
+
+### Deactivating a user
+
+    chsh --shell /usr/sbin/nologin $user
+
 
 ### Delete user accounts
 
@@ -36,10 +42,6 @@ Warning: the option `--remove-all-files` is nasty since it can remove data from 
       echo deluser --remove-home --backup-to /home/archive $user
     done
    
-Adding students to a new group that does no exist yet 
-
-    sudo addgroup phd
-    sudo ./append_users.sh users/phd.txt
    
 # Policies
 
