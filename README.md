@@ -39,10 +39,13 @@ Adding students to a new group that does no exist yet
 Warning: the option `--remove-all-files` is nasty since it can remove data from backups. 
 
     cat /etc/passwd | awk -F':' '/^a[0-9].*nologin/ {print $1}' | while read user; do
+      name=$(cat /etc/passwd | grep "^$user:" | awk -F'[:,]' '{print $5}' | tr ' ' '_')
+      echo "Deleting $user ($name)"
       echo deluser --remove-home --backup-to /home/archive $user
+      echo mv /home/archive/$user.tar.bz2 /home/archive/$user.$name.tar.bz2
     done
-   
-   
+
+
 # Policies
 
 At the end of a semester, we usually deactivate all the user accounts from that semester, and move the home directories to /home/archive/SEMESTER. After sometime, we completely delete those accounts. 
