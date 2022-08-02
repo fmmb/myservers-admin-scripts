@@ -53,7 +53,7 @@ At the end of a semester
 * A few weeks later we move the home directories to `/home/archive`.
 * After some time, we backup those directories to an external drive a completely delete them. 
 
-Each semester we create a new group for the new students, and change the name of the old one (e.g. tm => tm.2021-2022)
+At the beginning of each semester we create a new group for the new students, and change the name of the old one (e.g. tm => tm.2021-2022)
 
 # Skeleton
 
