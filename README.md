@@ -28,12 +28,13 @@ Deactivating a user account
 
     chsh --shell /usr/sbin/nologin user_name
 
-Delete all the accounts 
+## Delete all the accounts. 
+Warning: the option "--remove-all-files" is nasty since it can remove data from backups. 
 
     cat /etc/passwd | awk -F':' '/^a[0-9].*nologin/ {print $1}' | while read user; do
-      echo deluser $user
-      #echo deluser $user --remove-home
-      #echo deluser --remove-all-files --backup --backup-to /home/archive $user
+      # echo deluser $user
+      echo deluser --remove-home --backup-to /home/archive $user
+      echo deluser --remove-all-files --backup --backup-to /home/archive $user
     done
    
 Adding students to a new group that does no exist yet 
