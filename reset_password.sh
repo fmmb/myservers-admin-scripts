@@ -12,12 +12,13 @@ match=$(grep -c "^$username:" /etc/passwd )
 if [ $match -ne 0 ]; then
     name=$( cat /etc/passwd| grep "^$username:" | awk -F '[:,]' '{print $5}')
     if [ -z "$email" ]; then
-       email=$( cat /etc/passwd| grep "^$username:" | awk -F '[:,]' '{print $6}')
+       email=$( cat /etc/passwd| grep "^$username:" | awk -F '[:,]' '{print $9}')
     fi
     group=$(cat /etc/group | grep -v "jupyterhub" | grep -w "$username" | head -1 | cut -d':' -f1)
-    if [ ! -f messages.`hostname`/$group.txt ]; then
-      echo "error: File not found: messages.`hostname`/$group.txt"
-      exit 1
+    msg_template=messages.`hostname`/$group.txt
+    if [ ! -f $msg_template ]; then
+      echo "messages.`hostname`/$group.txt not found, using the default message template"
+      msg_template=messages.`hostname`/default.txt
     fi
     password=$(./create_random_passwd.py)
     #echo "($password)"
@@ -27,7 +28,7 @@ if [ $match -ne 0 ]; then
 		exit 1
 	fi
     echo "Sending the content of messages.`hostname`/$group.txt"
-    cat messages.`hostname`/$group.txt | sed "s/#NAME#/$name/g;s/#USERNAME#/$username/g;s/#PASSWORD#/$password/g" | ./envia_mail.py "$email"
+    cat $msg_template | sed "s/#NAME#/$name/g;s/#USERNAME#/$username/g;s/#PASSWORD#/$password/g" | ./envia_mail.py "$email"
     #if [ -n "$admin_email_pass" ]; then
     #else
     #  echo "cat messages.`hostname`/$group.txt | sed \"s/#NAME#/$name/g;s/#USERNAME#/$username/g;s/#PASSWORD#/$password/g\" | 

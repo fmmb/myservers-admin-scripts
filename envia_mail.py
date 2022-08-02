@@ -15,10 +15,7 @@ from email.mime.text import MIMEText
 # Default values
 # ------------------------------------------------------------------------------
 opt = {}
-opt['name'] = None
 opt['email'] = None
-opt['user'] = None
-opt['pass'] = None
 
 # Arguments
 # ------------------------------------------------------------------------------
@@ -29,11 +26,11 @@ for arg in sys.argv[1:]:
     elif opt['email'] == None:
         opt['email'] = arg
 
-if not opt['email']:
-	print("Error, incorrect number of arguments")
+if opt['email'] == None:
+	print("Error, e-mail not specified")
 	sys.exit(1)
 if opt['email'].find("@") < 0:
-	print("Error, Incorrect e-mail string")
+	print(f"Error, Incorrect e-mail string ({opt['email']})")
 	sys.exit(1)
 
 subject = None
@@ -53,11 +50,11 @@ emailuser = "fmmb@iscte-iul.pt"
 try:
     emailpass = os.environ['admin_email_pass']
 except:
-	emailpass = getpass.getpass()
+    emailpass = getpass.getpass()
 
 #mailfrom  = "Fernando Batista <" + emailuser + ">"
 #mailfrom  = "Fernando Batista <Fernando.Batista@iscte-iul.pt>"
-mailfrom  = "Fernando.Batista@iscte-iul.pt"
+mailfrom  = "fernando.batista@iscte-iul.pt"
 mailto = ""
 
 #mailto = unicode(opt['email'],'utf-8')

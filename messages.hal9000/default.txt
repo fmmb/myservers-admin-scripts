@@ -1,0 +1,17 @@
+Access to the server hal9000.iscte-iul.pt
+
+Dear #NAME#,
+
+You have been given access to the server hal9000.iscte-iul.pt.
+
+username: #USERNAME#
+password: #PASSWORD#
+
+Please change de password after logging in, using the command: passwd
+
+The server is available at the address http://hal9000.iscte-iul.pt/
+You will need a certificate to access the jupyter environment.
+If you have trouble acessing the server, please contact me.
+
+Best regards,
+Fernando Batista

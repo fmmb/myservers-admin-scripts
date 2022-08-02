@@ -30,9 +30,10 @@ Deactivating a user account
 
 Delete all the accounts 
 
-    cat /etc/passwd | awk -F':' '/^a[0-9]/ {print $1}' | while read user; do
+    cat /etc/passwd | awk -F':' '/^a[0-9].*nologin/ {print $1}' | while read user; do
+      echo deluser $user
       #echo deluser $user --remove-home
-      echo deluser --remove-all-files --backup --backup-to /home/archived $user
+      #echo deluser --remove-all-files --backup --backup-to /home/archive $user
     done
    
 Adding students to a new group that does no exist yet 
@@ -40,6 +41,11 @@ Adding students to a new group that does no exist yet
     sudo addgroup phd
     sudo ./append_users.sh users/phd.txt
    
+# Policies
+
+At the end of a semester, we usually deactivate all the user accounts from that semester, and move the home directories to /home/archive/SEMESTER. After sometime, we completely delete those accounts. 
+
+Each semester we create a new group for the new students, and change the name of the old one (e.g. tm => tm.2021-2022)
 
 # Skeleton
 
@@ -120,3 +126,12 @@ Add the following lines to `/etc/sudoers`
     %sudopass ALL=(ALL) ALL, !NSHELLS
     %sudo ALL=NOPASSWD: ALL, !NSHELLS, !NSU
     %staff ALL=NOPASSWD: /usr/bin/ipcs, /bin/kill
+
+
+# Real Example
+
+    cat users/2021-2022-ceb-fenix.txt | grep -v "Pedido" | ./fenix2info.sh  > users/2021-2022-ceb.txt
+    # move old ceb to ceb.202X-202Y
+    sudo addgroup ceb
+
+
