@@ -28,9 +28,9 @@ Deactivating a user account
 
     chsh --shell /usr/sbin/nologin user_name
 
-### Delete user accounts. 
+### Delete user accounts
 
-Warning: the option "--remove-all-files" is nasty since it can remove data from backups. 
+Warning: the option `--remove-all-files` is nasty since it can remove data from backups. 
 
     cat /etc/passwd | awk -F':' '/^a[0-9].*nologin/ {print $1}' | while read user; do
       echo deluser --remove-home --backup-to /home/archive $user
